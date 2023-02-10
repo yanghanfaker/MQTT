@@ -1,0 +1,15 @@
+CC = gcc
+TARGET = iot_daemon
+OBJS = iot_daemon.o socket.o
+#CFLAGS = -D_REENTRANT -DDEBUG -DDEBUG_PRINT -g -Wall 
+CFLAGS = -D_REENTRANT -DDEBUG -g -Wall 
+RM = rm -f
+
+$(TARGET):$(OBJS)
+	$(CC) -o $@ $^ $(CFLAGS) -lpthread
+
+$(OBJS):%.o:%.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+clean:
+	$(RM) $(TARGET) $(OBJS)
