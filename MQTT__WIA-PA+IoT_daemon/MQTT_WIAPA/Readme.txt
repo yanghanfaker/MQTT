@@ -1,7 +1,7 @@
 
 守护程序
 
-启动命令: iot_daemon -s /dev/ttyACM0 aaaa::1/64
+启动命令: iot_daemon -s /dev/ttyS0 aaaa::1/64
 
 成功启动守护程序需要linux /dev目录中存在相应的设备文件。一个为"-s"所指定的slip接口设备，另外一为虚拟网络设备----tun.
 "-s"所指定的slip接口设备要根据实际情况指定。当slip接口设备为USB设备时，设备名称为ttyACM0。当slip接口设备为RS232串口
@@ -16,7 +16,7 @@ PCBMS_SERVER_PORT4	5226	//for pc background managment software
 
 
 
-1.add the opc ua node to wiapa folder 2017.07.23
+1.add the opc ua node to wiapa folder 2021.07.23
 
 
 
